@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Item list</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <table class="goods">
+        <thead>
+            <tr>
+                <th onclick='collect()'>Name ˅</th>
+                <th>Price, $</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple AirPods</td>
+                <td>169.00</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>Sony WH1000XM3</td>
+                <td>278.00</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Sony WF-1000XM3</td>
+                <td>228.00</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Samsung Galaxy Buds</td>
+                <td>140</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Sennheiser HD 450BT</td>
+                <td>199.95</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>JBL Reflect Flow</td>
+                <td>149.95</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Sony WH-XB900N</td>
+                <td>189.95</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Apple AirPods Pro</td>
+                <td>249</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Beats Solo Pro</td>
+                <td>269.95</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let mydata=document.querySelectorAll('tbody tr');
+let forprice=document.querySelectorAll('tbody tr td:nth-of-type(2)')
+console.log(mydata)
+let ch=true;
+function collect(){
+    let datas=[];
+        mydata.forEach(element => {
+            datas.push(element.innerHTML)
+        });
+        //console.log(datas)
+    if(ch==true){
+        datas.sort(
+            
+        )
+        
+       for (let index = 0; index < mydata.length; index++) {
+        mydata[index].innerHTML = datas[index]
+        
+       }
+    // mydata.forEach(
+        
+    //     function(element,index){
+
+    //         element.innerHTML=datas[index]
+    //     }
+        
+    // );
+       ch=false;
+       //console.log(mydata)
+       
+    }
+    else{
+            datas.reverse()
+            console.log('salam')
+           for (let index = 0; index < mydata.length; index++) {
+            mydata[index].innerHTML = datas[index]
+            
+           }
+           console.log(mydata)
+           console.log(datas)
+           ch=false;
+    }
+    
+}
+            
+    </script>
+</body>
+
+</html>
